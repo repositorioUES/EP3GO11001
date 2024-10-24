@@ -1,5 +1,9 @@
 --USE GO11001P3
 
+/*******************************************INSERTAR DATOS A DIMFECHA ****************************************************************/
+insert into DimFecha
+select date_key,full_date,day_name,month_name,day_num_in_month,week_num_in_year,[month],[quarter],[year] from Date_Dimension
+
 /*******************************************DELETE y REINICIAR AUTOINCREMENTAL ****************************************************************/
 DELETE AerolineaRAW
 dbcc checkident('AerolineaRAW',RESEED,0);

@@ -109,5 +109,3 @@ same_day_year_ago_date smalldatetime,
 primary key (date_key))
 ;
 
-insert into DimFecha
-select date_key,full_date,day_name,month_name,day_num_in_month,week_num_in_year,[month],[quarter],[year] from Date_Dimension
